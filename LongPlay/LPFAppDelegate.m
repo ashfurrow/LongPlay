@@ -16,7 +16,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    self.window.titleBarHeight = 44.0f;
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.ashfurrow.Long_Play" in the user's Application Support directory.

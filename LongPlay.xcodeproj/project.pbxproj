@@ -11,24 +11,24 @@
 		5E292A1516B3452D009A538A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E292A1316B3452D009A538A /* InfoPlist.strings */; };
 		5E292A1716B3452D009A538A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E292A1616B3452D009A538A /* main.m */; };
 		5E292A1B16B3452D009A538A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5E292A1916B3452D009A538A /* Credits.rtf */; };
-		5E292A1E16B3452D009A538A /* AFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E292A1D16B3452D009A538A /* AFAppDelegate.m */; };
+		5E292A1E16B3452D009A538A /* LPFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E292A1D16B3452D009A538A /* LPFAppDelegate.m */; };
 		5E292A2116B3452E009A538A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E292A1F16B3452E009A538A /* MainMenu.xib */; };
 		5E292A2416B3452E009A538A /* Long_Play.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E292A2216B3452E009A538A /* Long_Play.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5E292A0616B3452D009A538A /* Long Play.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Long Play.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E292A0616B3452D009A538A /* LongPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LongPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E292A0A16B3452D009A538A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5E292A0D16B3452D009A538A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5E292A0E16B3452D009A538A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5E292A0F16B3452D009A538A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		5E292A1216B3452D009A538A /* Long Play-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Long Play-Info.plist"; sourceTree = "<group>"; };
+		5E292A1216B3452D009A538A /* LongPlay-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LongPlay-Info.plist"; sourceTree = "<group>"; };
 		5E292A1416B3452D009A538A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5E292A1616B3452D009A538A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5E292A1816B3452D009A538A /* Long Play-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Long Play-Prefix.pch"; sourceTree = "<group>"; };
+		5E292A1816B3452D009A538A /* LongPlay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LongPlay-Prefix.pch"; sourceTree = "<group>"; };
 		5E292A1A16B3452D009A538A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		5E292A1C16B3452D009A538A /* AFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFAppDelegate.h; sourceTree = "<group>"; };
-		5E292A1D16B3452D009A538A /* AFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFAppDelegate.m; sourceTree = "<group>"; };
+		5E292A1C16B3452D009A538A /* LPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPAppDelegate.h; sourceTree = "<group>"; };
+		5E292A1D16B3452D009A538A /* LPFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPFAppDelegate.m; sourceTree = "<group>"; };
 		5E292A2016B3452E009A538A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5E292A2316B3452E009A538A /* Long_Play.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Long_Play.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,7 +57,7 @@
 		5E292A0716B3452D009A538A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5E292A0616B3452D009A538A /* Long Play.app */,
+				5E292A0616B3452D009A538A /* LongPlay.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,8 +84,8 @@
 		5E292A1016B3452D009A538A /* Long Play */ = {
 			isa = PBXGroup;
 			children = (
-				5E292A1C16B3452D009A538A /* AFAppDelegate.h */,
-				5E292A1D16B3452D009A538A /* AFAppDelegate.m */,
+				5E292A1C16B3452D009A538A /* LPAppDelegate.h */,
+				5E292A1D16B3452D009A538A /* LPFAppDelegate.m */,
 				5E292A1F16B3452E009A538A /* MainMenu.xib */,
 				5E292A2216B3452E009A538A /* Long_Play.xcdatamodeld */,
 				5E292A1116B3452D009A538A /* Supporting Files */,
@@ -96,10 +96,10 @@
 		5E292A1116B3452D009A538A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5E292A1216B3452D009A538A /* Long Play-Info.plist */,
+				5E292A1216B3452D009A538A /* LongPlay-Info.plist */,
 				5E292A1316B3452D009A538A /* InfoPlist.strings */,
 				5E292A1616B3452D009A538A /* main.m */,
-				5E292A1816B3452D009A538A /* Long Play-Prefix.pch */,
+				5E292A1816B3452D009A538A /* LongPlay-Prefix.pch */,
 				5E292A1916B3452D009A538A /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -108,9 +108,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5E292A0516B3452D009A538A /* Long Play */ = {
+		5E292A0516B3452D009A538A /* LongPlay */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5E292A2716B3452E009A538A /* Build configuration list for PBXNativeTarget "Long Play" */;
+			buildConfigurationList = 5E292A2716B3452E009A538A /* Build configuration list for PBXNativeTarget "LongPlay" */;
 			buildPhases = (
 				5E292A0216B3452D009A538A /* Sources */,
 				5E292A0316B3452D009A538A /* Frameworks */,
@@ -120,9 +120,9 @@
 			);
 			dependencies = (
 			);
-			name = "Long Play";
+			name = LongPlay;
 			productName = "Long Play";
-			productReference = 5E292A0616B3452D009A538A /* Long Play.app */;
+			productReference = 5E292A0616B3452D009A538A /* LongPlay.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -131,10 +131,10 @@
 		5E2929FD16B3452D009A538A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = AF;
+				CLASSPREFIX = LP;
 				LastUpgradeCheck = 0450;
 			};
-			buildConfigurationList = 5E292A0016B3452D009A538A /* Build configuration list for PBXProject "Long Play" */;
+			buildConfigurationList = 5E292A0016B3452D009A538A /* Build configuration list for PBXProject "LongPlay" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -146,7 +146,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5E292A0516B3452D009A538A /* Long Play */,
+				5E292A0516B3452D009A538A /* LongPlay */,
 			);
 		};
 /* End PBXProject section */
@@ -170,7 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E292A1716B3452D009A538A /* main.m in Sources */,
-				5E292A1E16B3452D009A538A /* AFAppDelegate.m in Sources */,
+				5E292A1E16B3452D009A538A /* LPFAppDelegate.m in Sources */,
 				5E292A2416B3452E009A538A /* Long_Play.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,9 +263,9 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Long Play/Long Play-Prefix.pch";
-				INFOPLIST_FILE = "Long Play/Long Play-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Long Play/LongPlay-Prefix.pch";
+				INFOPLIST_FILE = "Long Play/LongPlay-Info.plist";
+				PRODUCT_NAME = LongPlay;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -275,9 +275,9 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Long Play/Long Play-Prefix.pch";
-				INFOPLIST_FILE = "Long Play/Long Play-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Long Play/LongPlay-Prefix.pch";
+				INFOPLIST_FILE = "Long Play/LongPlay-Info.plist";
+				PRODUCT_NAME = LongPlay;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -285,7 +285,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5E292A0016B3452D009A538A /* Build configuration list for PBXProject "Long Play" */ = {
+		5E292A0016B3452D009A538A /* Build configuration list for PBXProject "LongPlay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5E292A2516B3452E009A538A /* Debug */,
@@ -294,13 +294,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E292A2716B3452E009A538A /* Build configuration list for PBXNativeTarget "Long Play" */ = {
+		5E292A2716B3452E009A538A /* Build configuration list for PBXNativeTarget "LongPlay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5E292A2816B3452E009A538A /* Debug */,
 				5E292A2916B3452E009A538A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

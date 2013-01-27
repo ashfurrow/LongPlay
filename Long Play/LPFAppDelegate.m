@@ -6,9 +6,9 @@
 //
 //
 
-#import "AFAppDelegate.h"
+#import "LPAppDelegate.h"
 
-@implementation AFAppDelegate
+@implementation LPAppDelegate
 
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 @synthesize managedObjectModel = _managedObjectModel;

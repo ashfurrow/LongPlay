@@ -8,7 +8,22 @@
 
 #import "LPAppDelegate.h"
 
+@implementation NSColor (LPAdditions)
+- (CGColorRef)LP_CGColorCreate
+{
+    NSColor *rgbColor = [self colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+    CGFloat components[4];
+    [rgbColor getComponents:components];
+    
+    CGColorSpaceRef theColorSpace = CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB);
+    CGColorRef theColor = CGColorCreate(theColorSpace, components);
+    CGColorSpaceRelease(theColorSpace);
+	return theColor;
+}
+@end
+
 @implementation LPAppDelegate
+
 
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 @synthesize managedObjectModel = _managedObjectModel;
@@ -16,7 +31,78 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    self.window.titleBarHeight = 44.0f;
+    self.window.titleBarHeight = 61.0f;
+    self.window.verticalTrafficLightButtons = YES;
+    self.window.showsTitle = NO;
+    self.window.showsBaselineSeparator = NO;
+    
+    self.window.titleBarDrawingBlock = ^(BOOL drawsAsMainWindow, CGRect drawingRect, CGPathRef clippingPath)
+    {
+        CGContextRef context = [[NSGraphicsContext currentContext] graphicsPort];
+        // Draw gradient overlay
+        {
+            NSColor *startColor = [NSColor colorWithDeviceWhite:0.21f alpha:1.0f];
+            NSColor *endColor = [NSColor colorWithDeviceWhite:0.13f alpha:1.0f];
+            
+            CGContextAddPath(context, clippingPath);
+            CGContextClip(context);
+            
+            CGFloat locations[2] = {0.0f, 1.0f, };
+            CGColorRef cgStartingColor = [startColor LP_CGColorCreate];
+            CGColorRef cgEndingColor = [endColor LP_CGColorCreate];
+            CFArrayRef colors = (__bridge CFArrayRef)[NSArray arrayWithObjects:(__bridge id)cgStartingColor, (__bridge id)cgEndingColor, nil];
+            CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+            CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, colors, locations);
+            CGColorSpaceRelease(colorSpace);
+            CGColorRelease(cgStartingColor);
+            CGColorRelease(cgEndingColor);
+            
+            CGContextDrawLinearGradient(context, gradient, CGPointMake(NSMidX(drawingRect), NSMinY(drawingRect)),
+                                        CGPointMake(NSMidX(drawingRect), NSMaxY(drawingRect)), 0);
+            CGGradientRelease(gradient);
+            
+            NSColor *bottomColor = drawsAsMainWindow ? self.window.baselineSeparatorColor : self.window.inactiveBaselineSeparatorColor;
+            
+            bottomColor = bottomColor;
+            
+            NSRect bottomRect = NSMakeRect(0.0, NSMinY(drawingRect), NSWidth(drawingRect), 1.0);
+            [bottomColor set];
+            NSRectFill(bottomRect);
+            
+            bottomRect.origin.y += 1.0;
+            [[NSColor colorWithDeviceWhite:1.0 alpha:0.12] setFill];
+            [[NSBezierPath bezierPathWithRect:bottomRect] fill];
+        }
+        
+        // Draw drop shadow on top
+        {
+            CGContextSetStrokeColorWithColor(context, [[NSColor colorWithDeviceWhite:1.0f alpha:0.15f] CGColor]);
+            CGContextSetLineWidth(context, 1.0);
+            CGContextMoveToPoint(context, 0.0, CGRectGetHeight(drawingRect) - 1);
+            CGContextAddLineToPoint(context, CGRectGetWidth(drawingRect) - 1, CGRectGetHeight(drawingRect));
+            CGContextStrokePath(context);
+        }
+        
+        // Draw bottom stroke
+        {
+            CGContextSetStrokeColorWithColor(context, [[NSColor colorWithDeviceWhite:0.0f alpha:1.0f] CGColor]);
+            CGContextSetLineWidth(context, 1.0);
+            CGContextMoveToPoint(context, 0.0, 1);
+            CGContextAddLineToPoint(context, CGRectGetWidth(drawingRect), 1);
+            CGContextStrokePath(context);
+        }
+        
+        // Draw the gloss
+        {
+            NSColor *gloss = [NSColor colorWithDeviceWhite:1.0f alpha:0.1f];
+            
+            [gloss set];
+            CGContextFillRect(context, CGRectMake(0, 30.0f, CGRectGetWidth(drawingRect), 30.0f));
+        }
+
+    };
+    
+    self.window.titleBarView = self.titlebarView;
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.ashfurrow.Long_Play" in the user's Application Support directory.

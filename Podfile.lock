@@ -1,11 +1,11 @@
 
-COCOAPODS: 0.16.1
-
 SPEC CHECKSUMS: 
   INAppStoreWindow: d00327caee47d951043169df9aaab952389defcb
 
-DEPENDENCIES: 
-- INAppStoreWindow
+COCOAPODS: 0.16.1
 
 PODS: 
-- INAppStoreWindow (1.2)
+- INAppStoreWindow (HEAD based on 1.2)
+
+DEPENDENCIES: 
+- INAppStoreWindow (HEAD)

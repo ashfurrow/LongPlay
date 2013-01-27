@@ -9,6 +9,8 @@ INAppStoreWindow is an NSWindow subclass that mimics the appearance of the main 
 * No use of private APIs, so it's App Store friendly!
 * The title bar view is entirely customizable -- you can add subviews (toolbars, buttons, etc.) as well as customize the title bar itself to give it a different appearance
 * The height of the title bar is easily adjustable
+* Default `NSWindow` traffic light buttons appearance customization
+* Window's title appearance customization
 * Compiles and runs perfectly under ARC and non-ARC setups (thanks to [@kgn](https://github.com/kgn))
 * Support's Lion's full screen mode
 
@@ -72,6 +74,22 @@ The left padding of the traffic lights can be adjusted with `trafficLightButtons
 
 The baseline divider can be hidden by setting `showsBaselineSeparator` to `NO`, the default value is `YES`.
 
+### Customizing traffic lights buttons
+
+In order to customize these buttons, you would use `INWindowButton` class. You must create a separate instance for each button and provide your graphics for each state of the button. Currently the following states are supported:
+
+* Active
+* Active in not main window
+* Inactive (disabled)
+* Rollover
+* Pressed
+
+Please refer to `INWindowButton.h` header documentation for more details.
+
+### Customizing window's title appearance
+
+You can enable title drawing by setting `showsTitle` property to `YES`. You can adjust appearance using `titleTextColor`, `inactiveTitleTextColor`, `titleTextShadow`, and `inactiveTitleTextShadow` properties. Also, you can enable title drawing in fullscreen by setting `showsTitleInFullscreen` property to `YES`.
+
 ### Using your own drawing code
 
 A lot of time and effort has gone into making the custom titlebar in INAppStoreWindow function just right, it would be a shame to have to re-implement all this work just to draw your own custom title bar. So INAppStoreWindow has a `titleBarDrawingBlock` property that can be set to a block containing your own drawing code!
@@ -85,6 +103,20 @@ A lot of time and effort has gone into making the custom titlebar in INAppStoreW
 ```
 
 This block gets passed some useful parameters like if the window is the main one(`drawsAsMainWindow`), the drawing rect of the title bar(`drawingRect`), and a pre-made clipping path with rounded corners at the top(`clippingPath`).
+
+### Setting the title bar colors
+
+If you just want to adjust the color of the title bar without drawing the whole thing yourself, there are a few properties to help you do so:
+
+```obj-c
+self.window.titleBarStartColor     = [NSColor colorWithCalibratedWhite: 0.6 alpha: 1.0];
+self.window.titleBarEndColor       = [NSColor colorWithCalibratedWhite: 0.9 alpha: 1.0];
+self.window.baselineSeparatorColor = [NSColor colorWithCalibratedWhite: 0.2 alpha: 1.0];
+
+self.window.inactiveTitleBarEndColor       = [NSColor colorWithCalibratedWhite: 0.95 alpha: 1.0];
+self.window.inactiveTitleBarStartColor     = [NSColor colorWithCalibratedWhite: 0.8  alpha: 1.0];
+self.window.inactiveBaselineSeparatorColor = [NSColor colorWithCalibratedWhite: 0.4  alpha: 1.0];
+```
 
 
 ## Authors

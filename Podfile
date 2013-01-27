@@ -1,2 +1,2 @@
 platform :osx
-pod 'INAppStoreWindow'
+pod 'INAppStoreWindow', :head

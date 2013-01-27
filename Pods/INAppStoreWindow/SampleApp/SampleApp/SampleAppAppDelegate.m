@@ -3,22 +3,14 @@
 //  SampleApp
 //
 //  Created by Indragie Karunaratne on 11-02-23.
-//  Copyright 2011 PCWiz Computer. All rights reserved.
+//  Copyright 2011 Indragie Karunaratne. All rights reserved.
 //
 
 #import "SampleAppAppDelegate.h"
 #import "SampleWindowController.h"
+#import "INWindowButton.h"
 
 @implementation SampleAppAppDelegate
-
-@synthesize sheet = _sheet;
-@synthesize window = _window;
-@synthesize centerFullScreen = _centerFullScreen;
-@synthesize centerTrafficLight = _centerTrafficLight;
-@synthesize fullScreenRightMarginSlider = _fullScreenRightMarginSlider;
-@synthesize trafficLightLeftMargin = _trafficLightLeftMargin;
-@synthesize showsBaselineSeparator = _showsBaselineSeparator;
-@synthesize windowControllers = _windowControllers;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -26,31 +18,52 @@
     // The class of the window has been set in INAppStoreWindow in Interface Builder
     self.window.trafficLightButtonsLeftMargin = 7.0;
     self.window.fullScreenButtonRightMargin = 7.0;   
-    self.window.centerFullScreenButton = YES;    
-    self.window.titleBarHeight = 40.0;
+    self.window.centerFullScreenButton = YES;
+    self.window.titleBarHeight = 60.0;
     
     // set checkboxes
     self.centerFullScreen.state = self.window.centerFullScreenButton;
     self.centerTrafficLight.state = self.window.centerTrafficLightButtons;
+    self.verticalTrafficLight.state = self.window.verticalTrafficLightButtons;
     self.showsBaselineSeparator.state = self.window.showsBaselineSeparator;
     self.fullScreenRightMarginSlider.doubleValue = self.window.fullScreenButtonRightMargin;
     self.trafficLightLeftMargin.doubleValue = self.window.trafficLightButtonsLeftMargin;
+    self.trafficLightSeparation.doubleValue = self.window.trafficLightSeparation;
+    
+    self.window.showsTitle = YES;
+    [self setupCloseButton];
+    [self setupMinimizeButton];
+    [self setupZoomButton];
 }
 
-- (void)windowDidBecomeKey:(NSNotification *)notification{
-    [self.centerFullScreen setEnabled:YES];
-    [self.centerTrafficLight setEnabled:YES];
-    [self.showsBaselineSeparator setEnabled:YES];
-    [self.fullScreenRightMarginSlider setEnabled:YES];
-    [self.trafficLightLeftMargin setEnabled:YES];
+- (void)setupCloseButton {
+    INWindowButton *closeButton = [INWindowButton windowButtonWithSize:NSMakeSize(14, 16) groupIdentifier:nil];
+    closeButton.activeImage = [NSImage imageNamed:@"close-active-color.tiff"];
+    closeButton.activeNotKeyWindowImage = [NSImage imageNamed:@"close-activenokey-color.tiff"];
+    closeButton.inactiveImage = [NSImage imageNamed:@"close-inactive-disabled-color.tiff"];
+    closeButton.pressedImage = [NSImage imageNamed:@"close-pd-color.tiff"];
+    closeButton.rolloverImage = [NSImage imageNamed:@"close-rollover-color.tiff"];
+    self.window.closeButton = closeButton;
 }
 
-- (void)windowDidResignKey:(NSNotification *)notification{
-    [self.centerFullScreen setEnabled:NO];
-    [self.centerTrafficLight setEnabled:NO];
-    [self.showsBaselineSeparator setEnabled:NO];
-    [self.fullScreenRightMarginSlider setEnabled:NO];
-    [self.trafficLightLeftMargin setEnabled:NO];
+- (void)setupMinimizeButton {
+    INWindowButton *button = [INWindowButton windowButtonWithSize:NSMakeSize(14, 16) groupIdentifier:nil];
+    button.activeImage = [NSImage imageNamed:@"minimize-active-color.tiff"];
+    button.activeNotKeyWindowImage = [NSImage imageNamed:@"minimize-activenokey-color.tiff"];
+    button.inactiveImage = [NSImage imageNamed:@"minimize-inactive-disabled-color.tiff"];
+    button.pressedImage = [NSImage imageNamed:@"minimize-pd-color.tiff"];
+    button.rolloverImage = [NSImage imageNamed:@"minimize-rollover-color.tiff"];
+    self.window.minimizeButton = button;
+}
+
+- (void)setupZoomButton {
+    INWindowButton *button = [INWindowButton windowButtonWithSize:NSMakeSize(14, 16) groupIdentifier:nil];
+    button.activeImage = [NSImage imageNamed:@"zoom-active-color.tiff"];
+    button.activeNotKeyWindowImage = [NSImage imageNamed:@"zoom-activenokey-color.tiff"];
+    button.inactiveImage = [NSImage imageNamed:@"zoom-inactive-disabled-color.tiff"];
+    button.pressedImage = [NSImage imageNamed:@"zoom-pd-color.tiff"];
+    button.rolloverImage = [NSImage imageNamed:@"zoom-rollover-color.tiff"];
+    self.window.zoomButton = button;
 }
 
 - (IBAction)showSheetAction:(id)sender
@@ -78,7 +91,9 @@
     if ( [sender isEqual:self.centerFullScreen] ) {
         self.window.centerFullScreenButton = [sender state];
     } else if ( [sender isEqual:self.centerTrafficLight] ) {
-        self.window.centerTrafficLightButtons = [sender state];        
+        self.window.centerTrafficLightButtons = [sender state];
+    } else if ( [sender isEqual:self.verticalTrafficLight] ) {
+        self.window.verticalTrafficLightButtons = [sender state];
     } else {
         self.window.showsBaselineSeparator = [sender state];
     }
@@ -88,9 +103,11 @@
 {
     if ( [sender isEqual:self.fullScreenRightMarginSlider] ) {
         self.window.fullScreenButtonRightMargin = [sender doubleValue];
-    } else {
+    } else if ( [sender isEqual:self.trafficLightLeftMargin]) {
         self.window.trafficLightButtonsLeftMargin = [sender doubleValue];
-    }    
+    }  else if ( [sender isEqual:self.trafficLightSeparation] ) {
+        self.window.trafficLightSeparation = [sender doubleValue];
+    }
 }
 
 - (void)dealloc

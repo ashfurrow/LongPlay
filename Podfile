@@ -1,0 +1,2 @@
+platform :osx
+pod 'INAppStoreWindow'

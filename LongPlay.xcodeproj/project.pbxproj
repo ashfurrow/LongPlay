@@ -48,7 +48,7 @@
 		5E2929FB16B3452D009A538A = {
 			isa = PBXGroup;
 			children = (
-				5E292A1016B3452D009A538A /* Long Play */,
+				5E292A1016B3452D009A538A /* LongPlay */,
 				5E292A0916B3452D009A538A /* Frameworks */,
 				5E292A0716B3452D009A538A /* Products */,
 			);
@@ -81,7 +81,7 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		5E292A1016B3452D009A538A /* Long Play */ = {
+		5E292A1016B3452D009A538A /* LongPlay */ = {
 			isa = PBXGroup;
 			children = (
 				5E292A1C16B3452D009A538A /* LPAppDelegate.h */,
@@ -90,7 +90,7 @@
 				5E292A2216B3452E009A538A /* Long_Play.xcdatamodeld */,
 				5E292A1116B3452D009A538A /* Supporting Files */,
 			);
-			path = "Long Play";
+			path = "LongPlay";
 			sourceTree = "<group>";
 		};
 		5E292A1116B3452D009A538A /* Supporting Files */ = {
@@ -263,8 +263,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Long Play/LongPlay-Prefix.pch";
-				INFOPLIST_FILE = "Long Play/LongPlay-Info.plist";
+				GCC_PREFIX_HEADER = "LongPlay/LongPlay-Prefix.pch";
+				INFOPLIST_FILE = "LongPlay/LongPlay-Info.plist";
 				PRODUCT_NAME = LongPlay;
 				WRAPPER_EXTENSION = app;
 			};
@@ -275,8 +275,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Long Play/LongPlay-Prefix.pch";
-				INFOPLIST_FILE = "Long Play/LongPlay-Info.plist";
+				GCC_PREFIX_HEADER = "LongPlay/LongPlay-Prefix.pch";
+				INFOPLIST_FILE = "LongPlay/LongPlay-Info.plist";
 				PRODUCT_NAME = LongPlay;
 				WRAPPER_EXTENSION = app;
 			};

@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'Long Play' target in the 'Long Play' project
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif

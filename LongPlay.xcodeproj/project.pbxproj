@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		482603BB16B9F36E00B5F271 /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 482603BA16B9F36E00B5F271 /* INAppStoreWindow.m */; };
+		482603C116B9F8DD00B5F271 /* NSColor+LPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 482603C016B9F8DD00B5F271 /* NSColor+LPAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		482603C516B9F98000B5F271 /* NSImage+LPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 482603C416B9F98000B5F271 /* NSImage+LPAdditions.m */; };
 		5E292A0B16B3452D009A538A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E292A0A16B3452D009A538A /* Cocoa.framework */; };
 		5E292A1516B3452D009A538A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E292A1316B3452D009A538A /* InfoPlist.strings */; };
 		5E292A1716B3452D009A538A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E292A1616B3452D009A538A /* main.m */; };
@@ -14,12 +17,16 @@
 		5E292A1E16B3452D009A538A /* LPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E292A1D16B3452D009A538A /* LPAppDelegate.m */; };
 		5E292A2116B3452E009A538A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E292A1F16B3452E009A538A /* MainMenu.xib */; };
 		5E292A2416B3452E009A538A /* Long_Play.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E292A2216B3452E009A538A /* Long_Play.xcdatamodeld */; };
-		FCC634D269614BCF92274C50 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14947B23EEE947AEA194D215 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		14947B23EEE947AEA194D215 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B2E897A669C4B2FB6A54EED /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		482603B916B9F36E00B5F271 /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
+		482603BA16B9F36E00B5F271 /* INAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INAppStoreWindow.m; sourceTree = "<group>"; };
+		482603BC16B9F79200B5F271 /* LPCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPCommon.h; sourceTree = "<group>"; };
+		482603BF16B9F8DD00B5F271 /* NSColor+LPAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+LPAdditions.h"; sourceTree = "<group>"; };
+		482603C016B9F8DD00B5F271 /* NSColor+LPAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+LPAdditions.m"; sourceTree = "<group>"; };
+		482603C316B9F98000B5F271 /* NSImage+LPAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+LPAdditions.h"; sourceTree = "<group>"; };
+		482603C416B9F98000B5F271 /* NSImage+LPAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+LPAdditions.m"; sourceTree = "<group>"; };
 		5E292A0616B3452D009A538A /* LongPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LongPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E292A0A16B3452D009A538A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5E292A0D16B3452D009A538A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -42,20 +49,47 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E292A0B16B3452D009A538A /* Cocoa.framework in Frameworks */,
-				FCC634D269614BCF92274C50 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		482603BD16B9F7A900B5F271 /* INAppStoreWindow */ = {
+			isa = PBXGroup;
+			children = (
+				482603B916B9F36E00B5F271 /* INAppStoreWindow.h */,
+				482603BA16B9F36E00B5F271 /* INAppStoreWindow.m */,
+			);
+			name = INAppStoreWindow;
+			sourceTree = "<group>";
+		};
+		482603BE16B9F86E00B5F271 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				482603BD16B9F7A900B5F271 /* INAppStoreWindow */,
+				482603C216B9F8E000B5F271 /* Extensions */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		482603C216B9F8E000B5F271 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				482603BF16B9F8DD00B5F271 /* NSColor+LPAdditions.h */,
+				482603C016B9F8DD00B5F271 /* NSColor+LPAdditions.m */,
+				482603C316B9F98000B5F271 /* NSImage+LPAdditions.h */,
+				482603C416B9F98000B5F271 /* NSImage+LPAdditions.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		5E2929FB16B3452D009A538A = {
 			isa = PBXGroup;
 			children = (
 				5E292A1016B3452D009A538A /* LongPlay */,
 				5E292A0916B3452D009A538A /* Frameworks */,
 				5E292A0716B3452D009A538A /* Products */,
-				5B2E897A669C4B2FB6A54EED /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,7 +106,6 @@
 			children = (
 				5E292A0A16B3452D009A538A /* Cocoa.framework */,
 				5E292A0C16B3452D009A538A /* Other Frameworks */,
-				14947B23EEE947AEA194D215 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -90,6 +123,8 @@
 		5E292A1016B3452D009A538A /* LongPlay */ = {
 			isa = PBXGroup;
 			children = (
+				482603BC16B9F79200B5F271 /* LPCommon.h */,
+				482603BE16B9F86E00B5F271 /* Components */,
 				5E292A1C16B3452D009A538A /* LPAppDelegate.h */,
 				5E292A1D16B3452D009A538A /* LPAppDelegate.m */,
 				5E292A1F16B3452E009A538A /* MainMenu.xib */,
@@ -196,6 +231,9 @@
 				5E292A1716B3452D009A538A /* main.m in Sources */,
 				5E292A1E16B3452D009A538A /* LPAppDelegate.m in Sources */,
 				5E292A2416B3452E009A538A /* Long_Play.xcdatamodeld in Sources */,
+				482603BB16B9F36E00B5F271 /* INAppStoreWindow.m in Sources */,
+				482603C116B9F8DD00B5F271 /* NSColor+LPAdditions.m in Sources */,
+				482603C516B9F98000B5F271 /* NSImage+LPAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +322,6 @@
 		};
 		5E292A2816B3452E009A538A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B2E897A669C4B2FB6A54EED /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -297,7 +334,6 @@
 		};
 		5E292A2916B3452E009A538A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B2E897A669C4B2FB6A54EED /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

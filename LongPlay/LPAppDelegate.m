@@ -20,7 +20,7 @@
     [self.window.titleBarView addSubview:self.titlebarView];
 	
 	LPAlbumViewController *vc = [[LPAlbumViewController alloc] initWithNibName:@"LPAlbumViewController" bundle:nil];
-	[self.window.contentView addSubview:vc.view];
+	[self.window setContentView:vc.view];
     
     self.window.titleBarDrawingBlock = ^(BOOL main, CGRect drawingRect, CGPathRef clippingPath) {
 		

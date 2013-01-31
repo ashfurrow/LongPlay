@@ -16,6 +16,10 @@
 		482603D316B9FD0300B5F271 /* LPClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 482603CF16B9FD0200B5F271 /* LPClipView.m */; };
 		482603D416B9FD0300B5F271 /* NSTextView+LPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 482603D116B9FD0200B5F271 /* NSTextView+LPAdditions.m */; };
 		482603D716B9FE3C00B5F271 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482603D616B9FE3C00B5F271 /* Quartz.framework */; };
+		482603F016BA0FF100B5F271 /* pirelli.png in Resources */ = {isa = PBXBuildFile; fileRef = 482603EB16BA0F3300B5F271 /* pirelli.png */; };
+		482603F116BA0FF100B5F271 /* pirelli@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 482603EC16BA0F3300B5F271 /* pirelli@2x.png */; };
+		482603F216BA0FF100B5F271 /* mini_pirelli@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 482603ED16BA0F3300B5F271 /* mini_pirelli@2x.png */; };
+		482603F316BA0FF100B5F271 /* mini_pirelli.png in Resources */ = {isa = PBXBuildFile; fileRef = 482603EE16BA0F3300B5F271 /* mini_pirelli.png */; };
 		5E292A0B16B3452D009A538A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E292A0A16B3452D009A538A /* Cocoa.framework */; };
 		5E292A1516B3452D009A538A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E292A1316B3452D009A538A /* InfoPlist.strings */; };
 		5E292A1716B3452D009A538A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E292A1616B3452D009A538A /* main.m */; };
@@ -43,6 +47,10 @@
 		482603D016B9FD0200B5F271 /* LPClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPClipView.h; sourceTree = "<group>"; };
 		482603D116B9FD0200B5F271 /* NSTextView+LPAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextView+LPAdditions.m"; sourceTree = "<group>"; };
 		482603D616B9FE3C00B5F271 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		482603EB16BA0F3300B5F271 /* pirelli.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pirelli.png; sourceTree = "<group>"; };
+		482603EC16BA0F3300B5F271 /* pirelli@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pirelli@2x.png"; sourceTree = "<group>"; };
+		482603ED16BA0F3300B5F271 /* mini_pirelli@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini_pirelli@2x.png"; sourceTree = "<group>"; };
+		482603EE16BA0F3300B5F271 /* mini_pirelli.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mini_pirelli.png; sourceTree = "<group>"; };
 		5E292A0616B3452D009A538A /* LongPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LongPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E292A0A16B3452D009A538A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5E292A0D16B3452D009A538A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -126,6 +134,17 @@
 			name = "Layer Improvements";
 			sourceTree = "<group>";
 		};
+		482603EF16BA0F3700B5F271 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				482603EB16BA0F3300B5F271 /* pirelli.png */,
+				482603EC16BA0F3300B5F271 /* pirelli@2x.png */,
+				482603ED16BA0F3300B5F271 /* mini_pirelli@2x.png */,
+				482603EE16BA0F3300B5F271 /* mini_pirelli.png */,
+			);
+			name = Textures;
+			sourceTree = "<group>";
+		};
 		5E2929FB16B3452D009A538A = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +199,7 @@
 		5E292A1116B3452D009A538A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				482603EF16BA0F3700B5F271 /* Textures */,
 				5E292A1216B3452D009A538A /* LongPlay-Info.plist */,
 				5E292A1316B3452D009A538A /* InfoPlist.strings */,
 				5E292A1616B3452D009A538A /* main.m */,
@@ -242,6 +262,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				482603F016BA0FF100B5F271 /* pirelli.png in Resources */,
+				482603F116BA0FF100B5F271 /* pirelli@2x.png in Resources */,
+				482603F216BA0FF100B5F271 /* mini_pirelli@2x.png in Resources */,
+				482603F316BA0FF100B5F271 /* mini_pirelli.png in Resources */,
 				5E292A1516B3452D009A538A /* InfoPlist.strings in Resources */,
 				5E292A1B16B3452D009A538A /* Credits.rtf in Resources */,
 				5E292A2116B3452E009A538A /* MainMenu.xib in Resources */,

@@ -4,8 +4,8 @@ SPEC CHECKSUMS:
 
 COCOAPODS: 0.16.1
 
-PODS: 
-- INAppStoreWindow (HEAD based on 1.2)
-
 DEPENDENCIES: 
 - INAppStoreWindow (HEAD)
+
+PODS: 
+- INAppStoreWindow (HEAD based on 1.2)

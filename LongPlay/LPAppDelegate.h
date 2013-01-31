@@ -5,8 +5,8 @@
 
 @interface LPAppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet INAppStoreWindow *window;
-@property (assign) IBOutlet NSView *titlebarView;
+@property (nonatomic, weak) IBOutlet INAppStoreWindow *window;
+@property (nonatomic, weak) IBOutlet NSView *titlebarView;
 
 @property (nonatomic, strong, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (nonatomic, strong, readonly) NSManagedObjectModel *managedObjectModel;

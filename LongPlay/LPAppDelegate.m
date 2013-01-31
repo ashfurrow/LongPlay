@@ -1,4 +1,5 @@
 #import "LPAppDelegate.h"
+#import "LPAlbumViewController.h"
 #import "INAppStoreWindow.h"
 
 @interface LPAppDelegate ()
@@ -11,52 +12,48 @@
 
 @implementation LPAppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)notification {
+- (void)applicationWillFinishLaunching:(NSNotification *)notification {
     self.window.titleBarHeight = 64.0f;
     self.window.verticalTrafficLightButtons = YES;
     self.window.showsTitle = NO;
     self.window.showsBaselineSeparator = NO;
     [self.window.titleBarView addSubview:self.titlebarView];
+	
+	LPAlbumViewController *vc = [[LPAlbumViewController alloc] initWithNibName:@"LPAlbumViewController" bundle:nil];
+	[self.window.contentView addSubview:vc.view];
     
     self.window.titleBarDrawingBlock = ^(BOOL main, CGRect drawingRect, CGPathRef clippingPath) {
-        CGContextRef context = [[NSGraphicsContext currentContext] graphicsPort];
 		
-		{ // Draw the gradient.
-            CGContextAddPath(context, clippingPath);
-            CGContextClip(context);
-			
-			[[[NSGradient alloc] initWithColors:@[[NSColor colorWithDeviceWhite:0.21f alpha:1.0f],
-												  [NSColor colorWithDeviceWhite:0.13f alpha:1.0f]]]
-			 drawInRect:drawingRect angle:90.0f];
-			
-			[(main ? self.window.baselineSeparatorColor : self.window.inactiveBaselineSeparatorColor) set];
-            [[NSBezierPath bezierPathWithRect:NSMakeRect(0.0, NSMinY(drawingRect), NSWidth(drawingRect), 1.0)] fill];
-            
-            [[NSColor colorWithDeviceWhite:1.0 alpha:0.12] set];
-            [[NSBezierPath bezierPathWithRect:NSMakeRect(0.0, NSMinY(drawingRect) + 1.0f, NSWidth(drawingRect), 1.0)] fill];
-        }
-        
-        { // Draw drop shadow on top.
-            CGContextSetStrokeColorWithColor(context, [[NSColor colorWithDeviceWhite:1.0f alpha:0.15f] CGColor]);
-            CGContextSetLineWidth(context, 1.0);
-            CGContextMoveToPoint(context, 0.0, CGRectGetHeight(drawingRect) - 1);
-            CGContextAddLineToPoint(context, CGRectGetWidth(drawingRect) - 1, CGRectGetHeight(drawingRect));
-            CGContextStrokePath(context);
-        }
-        
-        { // Draw bottom stroke.
-            CGContextSetStrokeColorWithColor(context, [[NSColor colorWithDeviceWhite:0.0f alpha:1.0f] CGColor]);
-            CGContextSetLineWidth(context, 1.0);
-            CGContextMoveToPoint(context, 0.0, 1);
-            CGContextAddLineToPoint(context, CGRectGetWidth(drawingRect), 1);
-            CGContextStrokePath(context);
-        }
-        
-        { // Draw the gloss.
-            [[NSColor colorWithDeviceWhite:1.0f alpha:0.1f] set];
-			[[NSBezierPath bezierPathWithRect:NSMakeRect(0, NSHeight(drawingRect) / 2,
-														 NSWidth(drawingRect), NSHeight(drawingRect) / 2)] fill];
-        }
+		// Clip to the current clipping path.
+        CGContextRef context = [[NSGraphicsContext currentContext] graphicsPort];
+		CGContextAddPath(context, clippingPath);
+		CGContextClip(context);
+		
+		// Draw the gradient.
+		[[[NSGradient alloc] initWithColors:@[[NSColor colorWithCalibratedWhite:0.21f alpha:1.0f],
+		  [NSColor colorWithCalibratedWhite:0.13f alpha:1.0f]]]
+		 drawInRect:drawingRect angle:90.0f];
+		
+		// Draw the baseline separator.
+		[(main ? self.window.baselineSeparatorColor : self.window.inactiveBaselineSeparatorColor) set];
+		[[NSBezierPath bezierPathWithRect:NSMakeRect(0, NSMinY(drawingRect), NSWidth(drawingRect), 1)] fill];
+		[[NSColor colorWithCalibratedWhite:1.0 alpha:0.12] set];
+		[[NSBezierPath bezierPathWithRect:NSMakeRect(0, NSMinY(drawingRect) + 1, NSWidth(drawingRect), 1)] fill];
+		
+		// Draw the emboss.
+		[[NSColor colorWithCalibratedWhite:1.0f alpha:0.15f] set];
+		[[NSBezierPath bezierPathWithRect:NSMakeRect(0, NSHeight(drawingRect) - 1,
+													 NSWidth(drawingRect), NSHeight(drawingRect))] fill];
+		
+		// Draw the gloss.
+		[[NSColor colorWithCalibratedWhite:1.0f alpha:0.1f] set];
+		[[NSBezierPath bezierPathWithRect:NSMakeRect(0, floor(NSHeight(drawingRect) / 2),
+													 NSWidth(drawingRect), floor(NSHeight(drawingRect) / 2))] fill];
+		
+		// Draw the shine.
+		[[[NSGradient alloc] initWithColors:@[[NSColor colorWithCalibratedWhite:1.0f alpha:0.15f],
+											  [NSColor colorWithCalibratedWhite:1.0f alpha:0.0f]]]
+		 drawInRect:drawingRect relativeCenterPosition:NSMakePoint(0.25f, 0.5f)];
     };
 }
 

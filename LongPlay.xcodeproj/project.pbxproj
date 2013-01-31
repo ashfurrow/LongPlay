@@ -10,6 +10,12 @@
 		482603BB16B9F36E00B5F271 /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 482603BA16B9F36E00B5F271 /* INAppStoreWindow.m */; };
 		482603C116B9F8DD00B5F271 /* NSColor+LPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 482603C016B9F8DD00B5F271 /* NSColor+LPAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		482603C516B9F98000B5F271 /* NSImage+LPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 482603C416B9F98000B5F271 /* NSImage+LPAdditions.m */; };
+		482603C916B9FC2600B5F271 /* LPAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482603C716B9FC2500B5F271 /* LPAlbumViewController.m */; };
+		482603CA16B9FC2600B5F271 /* LPAlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 482603C816B9FC2500B5F271 /* LPAlbumViewController.xib */; };
+		482603D216B9FD0300B5F271 /* LPScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 482603CC16B9FD0200B5F271 /* LPScrollView.m */; };
+		482603D316B9FD0300B5F271 /* LPClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 482603CF16B9FD0200B5F271 /* LPClipView.m */; };
+		482603D416B9FD0300B5F271 /* NSTextView+LPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 482603D116B9FD0200B5F271 /* NSTextView+LPAdditions.m */; };
+		482603D716B9FE3C00B5F271 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482603D616B9FE3C00B5F271 /* Quartz.framework */; };
 		5E292A0B16B3452D009A538A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E292A0A16B3452D009A538A /* Cocoa.framework */; };
 		5E292A1516B3452D009A538A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E292A1316B3452D009A538A /* InfoPlist.strings */; };
 		5E292A1716B3452D009A538A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E292A1616B3452D009A538A /* main.m */; };
@@ -27,6 +33,16 @@
 		482603C016B9F8DD00B5F271 /* NSColor+LPAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+LPAdditions.m"; sourceTree = "<group>"; };
 		482603C316B9F98000B5F271 /* NSImage+LPAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+LPAdditions.h"; sourceTree = "<group>"; };
 		482603C416B9F98000B5F271 /* NSImage+LPAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+LPAdditions.m"; sourceTree = "<group>"; };
+		482603C616B9FC2500B5F271 /* LPAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPAlbumViewController.h; sourceTree = "<group>"; };
+		482603C716B9FC2500B5F271 /* LPAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPAlbumViewController.m; sourceTree = "<group>"; };
+		482603C816B9FC2500B5F271 /* LPAlbumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPAlbumViewController.xib; sourceTree = "<group>"; };
+		482603CC16B9FD0200B5F271 /* LPScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPScrollView.m; sourceTree = "<group>"; };
+		482603CD16B9FD0200B5F271 /* NSTextView+LPAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextView+LPAdditions.h"; sourceTree = "<group>"; };
+		482603CE16B9FD0200B5F271 /* LPScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPScrollView.h; sourceTree = "<group>"; };
+		482603CF16B9FD0200B5F271 /* LPClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPClipView.m; sourceTree = "<group>"; };
+		482603D016B9FD0200B5F271 /* LPClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPClipView.h; sourceTree = "<group>"; };
+		482603D116B9FD0200B5F271 /* NSTextView+LPAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextView+LPAdditions.m"; sourceTree = "<group>"; };
+		482603D616B9FE3C00B5F271 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		5E292A0616B3452D009A538A /* LongPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LongPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E292A0A16B3452D009A538A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5E292A0D16B3452D009A538A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -48,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				482603D716B9FE3C00B5F271 /* Quartz.framework in Frameworks */,
 				5E292A0B16B3452D009A538A /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,8 +84,10 @@
 		482603BE16B9F86E00B5F271 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				482603BC16B9F79200B5F271 /* LPCommon.h */,
 				482603BD16B9F7A900B5F271 /* INAppStoreWindow */,
 				482603C216B9F8E000B5F271 /* Extensions */,
+				482603D516B9FD3E00B5F271 /* Layer Improvements */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -80,8 +99,31 @@
 				482603C016B9F8DD00B5F271 /* NSColor+LPAdditions.m */,
 				482603C316B9F98000B5F271 /* NSImage+LPAdditions.h */,
 				482603C416B9F98000B5F271 /* NSImage+LPAdditions.m */,
+				482603CD16B9FD0200B5F271 /* NSTextView+LPAdditions.h */,
+				482603D116B9FD0200B5F271 /* NSTextView+LPAdditions.m */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		482603CB16B9FC2900B5F271 /* Albums View */ = {
+			isa = PBXGroup;
+			children = (
+				482603C616B9FC2500B5F271 /* LPAlbumViewController.h */,
+				482603C716B9FC2500B5F271 /* LPAlbumViewController.m */,
+				482603C816B9FC2500B5F271 /* LPAlbumViewController.xib */,
+			);
+			name = "Albums View";
+			sourceTree = "<group>";
+		};
+		482603D516B9FD3E00B5F271 /* Layer Improvements */ = {
+			isa = PBXGroup;
+			children = (
+				482603D016B9FD0200B5F271 /* LPClipView.h */,
+				482603CF16B9FD0200B5F271 /* LPClipView.m */,
+				482603CE16B9FD0200B5F271 /* LPScrollView.h */,
+				482603CC16B9FD0200B5F271 /* LPScrollView.m */,
+			);
+			name = "Layer Improvements";
 			sourceTree = "<group>";
 		};
 		5E2929FB16B3452D009A538A = {
@@ -105,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				5E292A0A16B3452D009A538A /* Cocoa.framework */,
+				482603D616B9FE3C00B5F271 /* Quartz.framework */,
 				5E292A0C16B3452D009A538A /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -123,8 +166,8 @@
 		5E292A1016B3452D009A538A /* LongPlay */ = {
 			isa = PBXGroup;
 			children = (
-				482603BC16B9F79200B5F271 /* LPCommon.h */,
 				482603BE16B9F86E00B5F271 /* Components */,
+				482603CB16B9FC2900B5F271 /* Albums View */,
 				5E292A1C16B3452D009A538A /* LPAppDelegate.h */,
 				5E292A1D16B3452D009A538A /* LPAppDelegate.m */,
 				5E292A1F16B3452E009A538A /* MainMenu.xib */,
@@ -157,6 +200,7 @@
 				5E292A0316B3452D009A538A /* Frameworks */,
 				5E292A0416B3452D009A538A /* Resources */,
 				B7292890E498447FB5FC66B9 /* Copy Pods Resources */,
+				482603D816BA078D00B5F271 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -201,12 +245,26 @@
 				5E292A1516B3452D009A538A /* InfoPlist.strings in Resources */,
 				5E292A1B16B3452D009A538A /* Credits.rtf in Resources */,
 				5E292A2116B3452E009A538A /* MainMenu.xib in Resources */,
+				482603CA16B9FC2600B5F271 /* LPAlbumViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		482603D816BA078D00B5F271 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /usr/bin/ruby;
+			shellScript = "def get_file_as_string(filename)\ndata = ''\nf = File.open(filename, \"r\")\nf.each_line do |line|\ndata += line\nend\nreturn data\nend\n\n\ndef handle_alpha_beta(old_value, letter, infoplist, start_of_value, end_of_value)\nparts = old_value.split(letter)\nversion_num = parts[0]\nalpha_num = parts[1].to_i\n\nalpha_num = alpha_num + 1\nnew_version = version_num.to_s + letter + alpha_num.to_s\nprint \"Assigning new version: \" + new_version + \"\\n\"\nnew_key = \"<string>#{new_version}</string>\"\n\npart_1 = infoplist[0, start_of_value - '<string>'.length];\npart_2 = new_key\npart_3 = infoplist[end_of_value + \"</string>\".length, infoplist.length - (end_of_value - start_of_value + (new_key.length - 1))]\n\nnew_info_plist = part_1 + part_2 + part_3\nnew_info_plist\nend\n\ndef find_and_increment_version_number_with_key(key, infoplist)\n\nstart_of_key = infoplist.index(key)\nstart_of_value = infoplist.index(\"<string>\", start_of_key) + \"<string>\".length\nend_of_value = infoplist.index(\"</string>\", start_of_value)\nold_value = infoplist[start_of_value, end_of_value - start_of_value]\n\nprint \"Old version for \" + key + \": \" + old_value + \"\\n\"\nprint old_value.class.to_s + \"\\n\"\nold_value_int = old_value.to_i\nprint old_value_int.class.to_s + \"\\n\"\nif (old_value.index(\"a\") != nil) # alpha\ninfoplist = handle_alpha_beta(old_value, \"a\", infoplist, start_of_value, end_of_value)\nelsif (old_value.index(\"b\") != nil) # beta\ninfoplist = handle_alpha_beta(old_value, \"b\", infoplist, start_of_value, end_of_value)\nelsif (old_value.index(\".\") != nil) # release dot version\nparts = old_value.split(\".\")\nlast_part = parts.last.to_i\nlast_part = last_part + 1\nparts.delete(parts.last)\n\nnew_version = \"\"\nfirst = true\nparts.each do |one_part|\nif (first)\nfirst = false\nelse\nnew_version = new_version + \".\"\nend\nnew_version = new_version + one_part\nend\nnew_version = new_version.to_s + \".\" + last_part.to_s\nprint \"New version: \" + new_version.to_s + \"\\n\"\nnew_key = \"<string>#{new_version}</string>\"\ninfoplist = \"#{infoplist[0, start_of_value - '<string>'.length]}#{new_key}#{infoplist[end_of_value + '</string>'.length, infoplist.length - (end_of_value+1)]}\"\nelsif (old_value.to_i != nil) # straight integer build number\nnew_version = old_value.to_i + 1\nprint \"New version: \" + new_version.to_s + \"\\n\"\nnew_key = \"<string>#{new_version}</string>\"\n\npart_1 = infoplist[0, start_of_value - '<string>'.length]\npart_2 = new_key\npart_3 = infoplist[end_of_value + \"</string>\".length, infoplist.length - (end_of_value+1)]\ninfoplist = part_1 + part_2 + part_3\nend\ninfoplist\nend\n\n\n\nconfig = ENV['CONFIGURATION'].upcase\nconfig_build_dir = ENV['CONFIGURATION_BUILD_DIR']\n\narchive_action = false\nif (config_build_dir.include?(\"ArchiveIntermediates\"))\narchive_action = true\nend\n\nprint \"Archive: \" + archive_action.to_s + \"\\n\"\n\n\nprint config\n\nif (config == \"RELEASE\")\nprint \" incrementing build numbers\\n\"\nproject_dir = ENV['PROJECT_DIR']\ninfoplist_file = ENV['INFOPLIST_FILE']\nplist_filename = \"#{project_dir}/#{infoplist_file}\"\n\ninfoplist = get_file_as_string(plist_filename)\ninfoplist = find_and_increment_version_number_with_key(\"CFBundleVersion\", infoplist)\nif (archive_action)\ninfoplist = find_and_increment_version_number_with_key(\"CFBundleShortVersionString\", infoplist)\nend\nFile.open(plist_filename, 'w') {|f| f.write(infoplist) }\nelse\nprint \" not incrementing build numbers\"\nend";
+		};
 		B7292890E498447FB5FC66B9 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,6 +292,10 @@
 				482603BB16B9F36E00B5F271 /* INAppStoreWindow.m in Sources */,
 				482603C116B9F8DD00B5F271 /* NSColor+LPAdditions.m in Sources */,
 				482603C516B9F98000B5F271 /* NSImage+LPAdditions.m in Sources */,
+				482603C916B9FC2600B5F271 /* LPAlbumViewController.m in Sources */,
+				482603D216B9FD0300B5F271 /* LPScrollView.m in Sources */,
+				482603D316B9FD0300B5F271 /* LPClipView.m in Sources */,
+				482603D416B9FD0300B5F271 /* NSTextView+LPAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

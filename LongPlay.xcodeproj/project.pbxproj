@@ -27,6 +27,9 @@
 		5E292A1E16B3452D009A538A /* LPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E292A1D16B3452D009A538A /* LPAppDelegate.m */; };
 		5E292A2116B3452E009A538A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E292A1F16B3452E009A538A /* MainMenu.xib */; };
 		5E292A2416B3452E009A538A /* Long_Play.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E292A2216B3452E009A538A /* Long_Play.xcdatamodeld */; };
+		5EA5D75717372A8A00E729CA /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EA5D75417372A8A00E729CA /* play.png */; };
+		5EA5D75817372A8A00E729CA /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EA5D75517372A8A00E729CA /* next.png */; };
+		5EA5D75917372A8A00E729CA /* previous.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EA5D75617372A8A00E729CA /* previous.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +66,9 @@
 		5E292A1D16B3452D009A538A /* LPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPAppDelegate.m; sourceTree = "<group>"; };
 		5E292A2016B3452E009A538A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5E292A2316B3452E009A538A /* Long_Play.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Long_Play.xcdatamodel; sourceTree = "<group>"; };
+		5EA5D75417372A8A00E729CA /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		5EA5D75517372A8A00E729CA /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		5EA5D75617372A8A00E729CA /* previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previous.png; sourceTree = "<group>"; };
 		E0CF55A679D440198A80F1A8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		FB1A2C48ABEE42A996862518 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -178,6 +184,7 @@
 		5E292A1016B3452D009A538A /* LongPlay */ = {
 			isa = PBXGroup;
 			children = (
+				5EA5D75A17372A8D00E729CA /* Images */,
 				482603BE16B9F86E00B5F271 /* Components */,
 				482603CB16B9FC2900B5F271 /* Albums View */,
 				5E292A1C16B3452D009A538A /* LPAppDelegate.h */,
@@ -200,6 +207,16 @@
 				5E292A1916B3452D009A538A /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5EA5D75A17372A8D00E729CA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5EA5D75417372A8A00E729CA /* play.png */,
+				5EA5D75517372A8A00E729CA /* next.png */,
+				5EA5D75617372A8A00E729CA /* previous.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +281,9 @@
 				5E292A1B16B3452D009A538A /* Credits.rtf in Resources */,
 				5E292A2116B3452E009A538A /* MainMenu.xib in Resources */,
 				482603CA16B9FC2600B5F271 /* LPAlbumViewController.xib in Resources */,
+				5EA5D75717372A8A00E729CA /* play.png in Resources */,
+				5EA5D75817372A8A00E729CA /* next.png in Resources */,
+				5EA5D75917372A8A00E729CA /* previous.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

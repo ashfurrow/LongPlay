@@ -13,7 +13,9 @@
 @implementation LPAppDelegate
 
 - (void)applicationWillFinishLaunching:(NSNotification *)notification {
-    self.window.titleBarHeight = 64.0f;
+    self.window.titleBarHeight = 62.0f;
+    self.window.centerTrafficLightButtons = YES;
+    self.window.trafficLightSeparation = 4.0f;
     self.window.verticalTrafficLightButtons = YES;
     self.window.showsTitle = NO;
     self.window.showsBaselineSeparator = NO;
@@ -30,8 +32,7 @@
 		CGContextClip(context);
 		
 		// Draw the gradient.
-		[[[NSGradient alloc] initWithColors:@[[NSColor colorWithCalibratedWhite:0.21f alpha:1.0f],
-		  [NSColor colorWithCalibratedWhite:0.13f alpha:1.0f]]]
+		[[[NSGradient alloc] initWithColors:@[[NSColor colorWithCalibratedWhite:0.129f alpha:1.0f], [NSColor colorWithCalibratedWhite:0.219f alpha:1.0f]]]
 		 drawInRect:drawingRect angle:90.0f];
 		
 		// Draw the baseline separator.
@@ -39,21 +40,16 @@
 		[[NSBezierPath bezierPathWithRect:NSMakeRect(0, NSMinY(drawingRect), NSWidth(drawingRect), 1)] fill];
 		[[NSColor colorWithCalibratedWhite:1.0 alpha:0.12] set];
 		[[NSBezierPath bezierPathWithRect:NSMakeRect(0, NSMinY(drawingRect) + 1, NSWidth(drawingRect), 1)] fill];
-		
+
 		// Draw the emboss.
 		[[NSColor colorWithCalibratedWhite:1.0f alpha:0.15f] set];
 		[[NSBezierPath bezierPathWithRect:NSMakeRect(0, NSHeight(drawingRect) - 1,
 													 NSWidth(drawingRect), NSHeight(drawingRect))] fill];
 		
 		// Draw the gloss.
-		[[NSColor colorWithCalibratedWhite:1.0f alpha:0.1f] set];
+		[[NSColor colorWithCalibratedWhite:1.0f alpha:0.05f] set];
 		[[NSBezierPath bezierPathWithRect:NSMakeRect(0, floor(NSHeight(drawingRect) / 2),
 													 NSWidth(drawingRect), floor(NSHeight(drawingRect) / 2))] fill];
-		
-		// Draw the shine.
-		[[[NSGradient alloc] initWithColors:@[[NSColor colorWithCalibratedWhite:1.0f alpha:0.15f],
-											  [NSColor colorWithCalibratedWhite:1.0f alpha:0.0f]]]
-		 drawInRect:drawingRect relativeCenterPosition:NSMakePoint(0.25f, 0.5f)];
     };
 }
 

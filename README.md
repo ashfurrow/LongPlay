@@ -3,6 +3,11 @@ LongPlay
 
 Long Play is a record playing app that Adam Shutsa and Ash Furrow (@ashfurrow) want to build in the open source community. It plays entire albums at once. The designers are located in the `Designs` folder.
 
+Project Status
+----------------
+
+This project is on a indefinite hiatus.
+
 ![Album select screen](https://raw.github.com/AshFurrow/LongPlay/master/Designs/album_select.jpg)
 
 ![Player screen](https://raw.github.com/AshFurrow/LongPlay/master/Designs/player.jpg)

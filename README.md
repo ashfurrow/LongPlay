@@ -6,7 +6,7 @@ Long Play is a record playing app that Adam Shutsa and Ash Furrow (@ashfurrow) w
 Project Status
 ----------------
 
-This project is on a indefinite hiatus.
+This project is on a indefinite hiatus. If anyone wants to take it over, [contact me](mailto:ash@ashfurrow.com).
 
 ![Album select screen](https://raw.github.com/AshFurrow/LongPlay/master/Designs/album_select.jpg)
 
